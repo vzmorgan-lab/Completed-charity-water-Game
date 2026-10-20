@@ -1,0 +1,127 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Play Water Drop, a clean-water-inspired game celebrating charity: water's mission.">
+    <title>Water Drop | Clean Water Challenge</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="site-header">
+        <a class="brand" href="https://www.charitywater.org/" target="_blank" rel="noopener noreferrer" aria-label="charity: water website">
+            <img src="img/cw_logo-horizontal.png" alt="charity: water">
+        </a>
+        <span class="header-label">A clean water challenge</span>
+    </header>
+
+    <main class="game-wrapper">
+        <section class="intro">
+            <p class="eyebrow">SMALL DROPS. BIG IMPACT.</p>
+            <h1>Every Drop Counts<span class="yellow-dot">.</span></h1>
+            <p class="tagline">
+                Catch clean water. Avoid dirty water. See how many points you can earn!
+            </p>
+        </section>
+
+        <section class="game-card" aria-label="Water Drop game">
+            <div class="game-toolbar">
+                <div class="stat">
+                    <span class="stat-label">SCORE</span>
+                    <strong id="score">0</strong>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">TIME LEFT</span>
+                    <strong><span id="time">30</span><small>s</small></strong>
+                </div>
+                <div class="stat">
+                    <span class="stat-label">GOAL</span>
+                    <strong id="goal">15</strong>
+                </div>
+            </div>
+
+            <div class="settings">
+                <label for="difficulty">Difficulty</label>
+                <select id="difficulty">
+                    <option value="easy">Easy</option>
+                    <option value="normal" selected>Normal</option>
+                    <option value="hard">Hard</option>
+                </select>
+
+                <button id="sound-btn" class="sound-btn" type="button"
+                        aria-pressed="true" aria-label="Turn sound off">
+                    Sound: On
+                </button>
+            </div>
+
+            <div id="game-container" aria-label="Game area">
+                <div id="start-message">
+                    <div class="start-drop" aria-hidden="true">💧</div>
+                    <h2>Ready to make a splash?</h2>
+                    <p>Catch blue drops for points. Avoid dirty drops!</p>
+                    <p class="start-hint">Choose your difficulty, then start playing.</p>
+                </div>
+            </div>
+
+            <p id="message" class="game-message" aria-live="polite">
+                Clean water is worth +1 point. Dirty water costs 2 points.
+            </p>
+
+            <div class="game-actions">
+                <button id="start-btn" class="primary-btn" type="button">
+                    Start Game
+                </button>
+                <button id="reset-btn" class="reset-btn" type="button">
+                    Reset
+                </button>
+            </div>
+
+            <div class="instructions">
+                <div class="instruction-item">
+                    <span class="drop-example clean-example" aria-hidden="true"></span>
+                    <span><strong>Clean water</strong><small>+1 point</small></span>
+                </div>
+                <div class="instruction-item">
+                    <span class="drop-example dirty-example" aria-hidden="true"></span>
+                    <span><strong>Dirty water</strong><small>−2 points</small></span>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission">
+            <div class="mission-icon" aria-hidden="true">🌍</div>
+            <div>
+                <p class="eyebrow">BEYOND THE GAME</p>
+                <h2>Clean water changes everything.</h2>
+                <p>
+                    Access to clean water can help communities stay healthy,
+                    attend school, and build brighter futures. Learn more about
+                    the work of charity: water.
+                </p>
+                <div class="mission-links">
+                    <a href="https://www.charitywater.org/"
+                       target="_blank" rel="noopener noreferrer">
+                        Explore the mission ↗
+                    </a>
+                    <a href="https://www.charitywater.org/donate"
+                       target="_blank" rel="noopener noreferrer">
+                        Support clean water ↗
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <p>Made as a student game project inspired by charity: water.</p>
+        <p>
+            <a href="https://www.charitywater.org/"
+               target="_blank" rel="noopener noreferrer">charity: water</a>
+            · An independent educational project
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
